@@ -17,7 +17,6 @@ def root_win(peoplenum:int, times:int):
         deals = rootbox[:peoplenum] # シャッフルしたカードをひとりめから順番に配っていく
         
         # 結果を確認する
-        #winners.append(p for p in range(peoplenum) if deals[p] == max(deals) )  # 何番目に配られた人が勝ったかを記録
         for p in range(peoplenum):
             if deals[p] == max(deals):
                 winners.append(p)
@@ -64,12 +63,12 @@ def root_need99(peoplenum:int, times:int):
     print("勝ったときのロット数値の最低値：" + str(min(win_number)))
 
 def main():
-    root_need99(4,10000)     # 4人ロット(LightParty) でロット100万回
-    root_need99(8,10000)     # 8人ロット(FullParty) でロット100万回
-    root_need99(24,10000)    # 24人ロット(Alliance) でロット100万回
-    root_win(4,10000)     # 4人ロット(LightParty) で99ロット100万回
-    root_win(8,10000)     # 8人ロット(FullParty) で99ロット100万回
-    root_win(24,10000)    # 24人ロット(Alliance) で99ロット100万回
+    root_need99(4,1000000)     # 4人ロット(LightParty) でロット100万回
+    root_need99(8,1000000)     # 8人ロット(FullParty) でロット100万回
+    root_need99(24,1000000)    # 24人ロット(Alliance) でロット100万回
+    root_win(4,1000000)     # 4人ロット(LightParty) で99ロット100万回
+    root_win(8,1000000)     # 8人ロット(FullParty) で99ロット100万回
+    root_win(24,1000000)    # 24人ロット(Alliance) で99ロット100万回
 
 if __name__ == '__main__':
     main()
